@@ -1,0 +1,58 @@
+.repository-container {
+  width: 100%;
+  max-width: 1120px;
+  height: 100vh;
+  margin: 0 auto;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.repository-container .content {
+  display: flex;
+}
+
+.repository-container .content form {
+  width: 100%;
+  max-width: 450px;  
+}
+
+.repository-container .content form input{
+  padding: 10px 15px;
+}
+
+.repository-container .content form .input-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.repository-container .content form input + input {
+  margin-top: 15px;
+}
+
+.repository-container li {
+  display: flex;
+  align-items: center;
+}
+
+.repository-container p {
+  width: 100%;
+  max-width: 300px;
+  padding: 10px 15px;
+}
+
+.repository-container button {
+  background: #7159c1;
+  color: #fff;
+  border: 0;
+  padding: 10px 15px;
+  cursor: pointer;
+  margin-top: 15px;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.repository-container li button {
+  background: #ca4949;
+}
