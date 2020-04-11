@@ -1,8 +1,21 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
+import api from './services/api';
 
 import "./styles.css";
 
+import Repository from './components/Repository';
+
 function App() {
+  const [repository, setRepository] = useState([]);
+
+  useEffect(() => {
+    api.get('repositories').then(response => {
+      setRepository(response.data);
+    console.log(response);
+    console.log(response.title);
+    });
+  }, []);
+
   async function handleAddRepository() {
     // TODO
   }
@@ -15,7 +28,8 @@ function App() {
     <div>
       <ul data-testid="repository-list">
         <li>
-          Repositório 1
+          Repositórios
+          <Repository title={setRepository(repository.map(repo => repo.title === title))} />
 
           <button onClick={() => handleRemoveRepository(1)}>
             Remover
